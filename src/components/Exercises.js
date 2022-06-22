@@ -22,12 +22,10 @@ const Exercises = ({setExercises, exercises, bodyPart}) => {
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisePerPage;
-  console.log('last', indexOfLastExercise)
+
   const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
 
-  console.log('first',indexOfFirstExercise)
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise)
-  console.log('current', currentExercises)
   const paginate = (event, value) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1800, behavior: 'smooth'});
